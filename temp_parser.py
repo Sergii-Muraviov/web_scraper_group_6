@@ -31,7 +31,11 @@ from requests.adapters import HTTPAdapter
 # - зберігають дані у вигляді атрибутів
 # - автоматично генерують методи __init__, __repr__, __eq__ та ін.
 # - роблять код більш чистим та зручним для обробки структурованих даних
-from dataclasses import dataclass
+
+# Модуль дозволяє читати та записувати дані в CSV файл
+import csv
+
+from dataclasses import dataclass, fields, astuple
 
 @dataclass
 class Product:
